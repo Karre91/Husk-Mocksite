@@ -1,0 +1,39 @@
+﻿@model OrderItem
+@using HuskMock.Data.Entities
+@{
+    ViewData["Title"] = "Cup";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col ">
+        <img src="~/img/Cup.jpg" alt="Cup" class="img-fluid w-75">
+    </div>
+    <div class="col ">
+        <p>
+            Every happy camper needs a unique camper mug. It's lightweight, durable and multifunctional. Use it for your favorite beverage or a hot meal, and attach it to your bag for easy access on a hike.
+        </p>
+
+        <br />
+        <ul>
+            <li>Material: Enamel</li>
+            <li>Dimensions: height 3.14″ (8 cm), diameter 3.25″(8.25 cm)</li>
+            <li>White coating with a silver rim</li>
+            <li>Hand-wash only</li>
+            <li>Blank product sourced from China</li>
+        </ul>
+        <p class="btn-warning">Attention! Don't heat liquids or food directly in the mug—it can damage the coating.</p>
+        <form method="post">
+            <br />
+
+            <input type="number" value="1" min="1" asp-for="Quantity" />
+            <input type="submit" value="Buy">
+
+            <div>@ViewBag.UserMessage</div>
+        </form>
+        
+    </div>
+
+</div>
+
+

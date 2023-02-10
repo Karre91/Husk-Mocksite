@@ -1,0 +1,53 @@
+﻿@model OrderItem
+
+
+@using HuskMock.Data.Entities
+@{
+    ViewData["Title"] = "Longsleeve Shirt";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+
+    <div class="row">
+        <div class="col ">
+            <img src="~/img/LongSleeve.jpg" alt="Longsleeve" class="img-fluid w-75">
+        </div>
+        <div class="col ">
+            <ul>
+                <li>100% cotton</li>
+                <li>
+                    Classic fit with long sleeves and rib cuffs
+                </li>
+                <li>
+                    Pre-shrunk jersey knit
+                </li>
+                <li>
+                    Seamless double-needle 7⁄8'' (2.2 cm) collar
+                </li>
+                <li>
+                    Double-needle bottom hem
+                </li>
+                <li>
+                    Taped neck and shoulders
+                </li>
+                <li>Quarter-turned to avoid crease down the middle</li>
+            </ul>
+            <form method="post">
+                <br />
+                <input type="number" value="1" min="1" asp-for="Quantity" />
+                <input type="submit" value="Buy">
+                <div>@ViewBag.UserMessage</div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+

@@ -1,0 +1,61 @@
+﻿@using HuskMock.Data.Entities
+@using HuskMock.Models
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+@{
+    ViewData["Title"] = "Shop";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+@model IEnumerable<Product>
+<div class="container">
+    <div class="row">
+        @foreach (var p in Model)
+        {
+            <div class="col-lg-4 col-sm-6 mb-30">
+                <div class="product-card mx-auto mb-3 rounded-3">
+                    <div class="product-head d-flex justify-content-between align-items-center">
+                        @if (p.Sale)
+                        {
+                            <span class="badge badge-danger bg-warning">Sale</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-danger"> </span>
+                        }
+                        <div class="rating-stars">
+                            <i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i>
+                        </div>
+                    </div>
+
+                    <a class="product-thumb thumb-post" asp-controller="Shop" asp-action="@p.View"> <img src="~/img/@(p.PicWay).jpg" alt="Product Thumbnail"></a>
+                    <div class="product-card-body">
+                        <a class="product-meta" href="#">@p.Category</a>
+                        <h5 class="product-title"><a asp-controller="Shop" asp-action="@p.View">@p.Title</a></h5><span class="product-price">
+                            @if (p.Sale)
+                            {
+                                <del><span>£</span>@p.Price</del>
+
+                                <span>£</span>
+
+                                @p.SalePrice
+
+                            }
+                            else
+                            {
+                                <span>£</span>
+
+                                @p.Price
+                            }
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.10.0/feather.js"></script>

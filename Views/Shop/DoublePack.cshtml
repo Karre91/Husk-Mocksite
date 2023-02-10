@@ -1,0 +1,71 @@
+﻿@model OrderItem
+@using HuskMock.Data.Entities
+@{
+    ViewData["Title"] = "Double-Pack";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col ">
+        <img src="~/img/DoublePack.jpg" alt="Double-Pack" class="img-fluid w-75">
+    </div>
+    <div class="col ">
+        <p>
+            Each Husk Hammock comes with everything you need for a quick and efficent set up and pack down.
+
+
+
+            Each pack includes
+
+            
+        </p>
+
+        <br />
+        <ul>
+            <li>Double Nylon Parachute (10 foot x 6.25 foot)</li>
+            <li>
+                Attached Compression bag
+            </li>
+            <li>
+                Designed for longevity and portability.
+            </li>
+            <li>
+                Designed for longevity and portability.
+            </li>
+            <li>
+                Less than a kilo in weight
+            </li>
+            
+            
+            
+            <li>Tree saver straps (16 loops)</li>
+            <li>Heavy duty, lightweight carbiners</li>
+            
+            <li>Reinforced heavy duty triple stitching</li>
+            <li>Holds 1-2 people</li>
+            <li> Loading capacity tested to 400kg!</li>
+           
+            <li>One Year Warranty</li>
+            
+            <li>Two trees planted for each purchase.</li>
+        </ul>
+
+        Each Husk Hammock comes with a one year warranty.  This Limited warranty covers any defects in material or worksmanship under normal use during the warranty period. During this period Husk Hammocks will repair or replace the product or parts of the product defective from normal use.
+
+        This warranty does not cover any problem caused by malfunctions or damage caused by improper use.
+
+        To obtain warranty service you must first contact us to determine the problem and the most appropiate solution for you.
+        <form method="post">
+            <br />
+
+            <input type="number" value="1" min="1" asp-for="Quantity" />
+            <input type="submit" value="Buy">
+
+            <div>@ViewBag.UserMessage</div>
+        </form>
+       
+    </div>
+
+</div>
+
+

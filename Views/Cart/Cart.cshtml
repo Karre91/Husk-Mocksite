@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "CART";
+
+}
+<h1>@ViewData["Title"]</h1>
+
+@model List<Tuple<OrderItem, Product>>
+@using HuskMock.Data.Entities
+
+@foreach (var p in Model)
+{   
+    <div class="row">
+        <div class="col">
+            <img src="~/img/@(p.Item2.PicWay).jpg" alt="Product Thumbnail" class="img-fluid w-50 cart-pic">
+        </div>
+        <div class="col"><p>Quantity: @p.Item1.Quantity <br> Item: @p.Item2.Title <br>  Price: @p.Item2.Price <br /> Total Price: @p.Item1.UnitPrice </p></div>
+        <div class="col">
+            <form method="post">
+                <button type="submit" asp-controller="Cart" asp-route-id="@p.Item1.Id"  asp-action="Cart">DELETE</button>
+            </form>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,54 @@
+[
+  {
+    "Id": 0,
+    "Category": "Clothing",
+    "Color": "Black",
+    "PicWay": "LongSleeve",
+    "Price": 50,
+    "Sale": true,
+    "SalePrice": 40,
+    "Size": "M",
+    "Stock": 100,
+    "Title": "Long Sleeve Shirt",
+    "View": "LongSleeve"
+  },
+  {
+    "Id": 1,
+    "Category": "Hammock",
+    "Color": "Black",
+    "PicWay": "DoublePack",
+    "Price": 70,
+    "Sale": false,
+    "SalePrice": 50,
+    "Size": "OneSize",
+    "Stock": 100,
+    "Title": "Double Pack",
+    "View": "DoublePack"
+  },
+  {
+    "Id": 2,
+    "Category": "Hammock",
+    "Color": "Black",
+    "PicWay": "DoubleSack",
+    "Price": 70,
+    "Sale": false,
+    "SalePrice": 50,
+    "Size": "OneSize",
+    "Stock": 100,
+    "Title": "Double Sack",
+    "View": "DoubleSack"
+  },
+  {
+    "Id": 3,
+    "Category": "Home",
+    "Color": "White",
+    "PicWay": "Cup",
+    "Price": 20,
+    "Sale": false,
+    "SalePrice": 10,
+    "Size": "OneSize",
+    "Stock": 100,
+    "Title": "Cup",
+    "View": "Cup"
+  }
+]
